@@ -24,6 +24,14 @@ var questions =  [
 {
   question: "Is my age greater than 25? ",
   answer: "No"
+},
+{
+  question: "Who is my favourite superhero? ",
+  answer: "Spiderman"
+},
+{
+  question: "Which is my favourite food? ",
+  answer: "Aloo Paratha"
 }
 ];
 
