@@ -1,15 +1,17 @@
 var readlineSync = require('readline-sync');
+const chalk = require('chalk')
 var score = 0;
 function play(question, answer){
   var userAns = readlineSync.question(question);
   if(userAns.toUpperCase() === answer.toUpperCase()){
-    console.log("You are right!");
+    console.log(chalk.green("You are right!"));
     score++;
   }else{
-    console.log("You are wrong!");
+    console.log(chalk.red("You are wrong!"));
   }
   console.log("Your current score: " + score);
-  console.log("------------");
+  console.log(chalk.bgMagenta("-------------------------"));
+  console.log('');
 }
 
 var questions =  [
@@ -39,4 +41,4 @@ for(var i=0; i<questions.length; i++){
   play(questions[i].question, questions[i].answer);
 }
 
-console.log("YOUR FINAL SCORE: "+score);
+console.log(chalk.black.bgGreen.bold("YOUR FINAL SCORE: "+score+" "));
